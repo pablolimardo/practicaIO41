@@ -1,0 +1,117 @@
+<!DOCTYPE html><html lang="es"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ficha de escritorio · Misión Expo | 4° 1°</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;900&family=JetBrains+Mono:wght@400;600&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet"><style>
+:root{--bg:#0a0e27;--card:rgba(255,255,255,.045);--border:rgba(0,217,255,.2);--cyan:#00d9ff;--blue:#4299e1;--green:#00ff88;--amber:#ffb547;--red:#ff5c7a;--text:#e6ecff;--muted:#9aa6cc;--code:#060918}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:radial-gradient(circle at 15% 0%,#16204d 0%,var(--bg) 45%) fixed,var(--bg);color:var(--text);font-family:'IBM Plex Sans',sans-serif;line-height:1.6;min-height:100vh}
+.wrap{max-width:1000px;margin:0 auto;padding:0 16px 48px}
+h1{font-family:'Orbitron',sans-serif;font-weight:900;background:linear-gradient(90deg,var(--cyan),var(--blue));-webkit-background-clip:text;background-clip:text;color:transparent;line-height:1.2}
+.chip{display:inline-block;font-family:'JetBrains Mono',monospace;font-size:.78rem;color:var(--cyan);border:1px solid var(--border);border-radius:999px;padding:3px 12px;letter-spacing:1px}
+pre,code{font-family:'JetBrains Mono',monospace}
+code{background:rgba(0,217,255,.1);color:var(--cyan);padding:1px 6px;border-radius:5px;font-size:.9em}
+.codebox{position:relative;margin:10px 0}
+.codebox pre{background:var(--code);border:1px solid rgba(66,153,225,.25);border-radius:12px;padding:16px;overflow-x:auto;font-size:.9rem;line-height:1.55;color:#d6e2ff;white-space:pre}
+.copiar{position:absolute;top:8px;right:8px;font-family:'JetBrains Mono',monospace;font-size:.75rem;background:rgba(0,217,255,.12);color:var(--cyan);border:1px solid var(--border);border-radius:6px;padding:4px 10px;cursor:pointer}
+.copiar:hover{background:rgba(0,217,255,.25)}.copiar.ok{color:var(--green);border-color:var(--green)}
+footer{text-align:center;color:var(--muted);font-size:.85rem;padding:28px 0 8px;border-top:1px solid var(--border);margin-top:24px}
+footer b{display:block;font-family:'Orbitron',sans-serif;color:var(--cyan);font-size:.78rem;letter-spacing:1px;font-weight:500;margin-top:4px}
+button{font-family:inherit}
+
+#barra{position:fixed;top:0;left:0;height:4px;width:0;background:linear-gradient(90deg,var(--blue),var(--cyan),var(--green));z-index:100;box-shadow:0 0 12px var(--cyan)}
+header{text-align:center;padding:52px 0 22px}
+header h1{font-size:clamp(1.6rem,5vw,2.5rem);margin-top:14px}
+.subt{color:var(--muted);margin-top:8px}
+nav{position:sticky;top:0;z-index:50;display:flex;flex-wrap:wrap;gap:8px;justify-content:center;padding:12px 0;background:rgba(10,14,39,.88);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);margin-bottom:18px}
+nav a{font-family:'JetBrains Mono',monospace;font-size:.85rem;color:var(--text);text-decoration:none;padding:6px 12px;border-radius:8px;border:1px solid var(--border);background:var(--card)}
+nav a:hover,nav a.activo{border-color:var(--cyan);color:var(--cyan);background:rgba(0,217,255,.1)}
+.card{background:var(--card);border:1px solid var(--border);border-radius:18px;padding:24px 22px;margin-bottom:24px;backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);box-shadow:0 8px 32px rgba(0,0,0,.35);scroll-margin-top:70px}
+.reglas h2,.card h2{font-family:'Orbitron',sans-serif;font-size:1.15rem;color:var(--cyan);letter-spacing:.5px}
+.reglas ul{margin:10px 0 0 22px}.reglas li{margin-bottom:6px}
+.exh{display:flex;align-items:center;gap:14px;flex-wrap:wrap;margin-bottom:12px}
+.num{font-family:'Orbitron',sans-serif;font-weight:900;font-size:1.4rem;color:#04121f;background:var(--cyan);width:46px;height:46px;border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;box-shadow:0 0 16px rgba(0,217,255,.4)}
+.ec{color:var(--muted);font-size:.95rem}
+.link{margin-left:auto;font-family:'JetBrains Mono',monospace;font-size:.75rem;color:var(--cyan);border:1px solid var(--border);border-radius:999px;padding:4px 12px}
+.dato{font-family:'JetBrains Mono',monospace;font-weight:600;background:var(--code);border:1px solid rgba(0,255,136,.3);color:var(--green);border-radius:10px;padding:12px 14px;margin-bottom:12px;overflow-x:auto}
+ol{margin-left:22px}ol li{margin-bottom:14px}
+.tag{display:inline-block;font-family:'JetBrains Mono',monospace;font-size:.7rem;font-weight:600;letter-spacing:.5px;color:var(--c);border:1px solid var(--c);border-radius:6px;padding:1px 8px;margin-right:4px}
+@media(max-width:600px){.card{padding:20px 16px}.link{margin-left:0}}
+</style></head><body><div id="barra"></div><div class="wrap">
+<header><span class="chip">4° 1° · ALGORITMOS Y PROGRAMACIÓN · ACPI</span><h1>Misión Expo · Ficha de escritorio</h1><p class="subt">Listas enlazadas y árboles binarios: practicamos lo mismo que se está evaluando en el pizarrón</p></header>
+<nav><a href="#ej1">Ej. 1</a><a href="#ej2">Ej. 2</a><a href="#ej3">Ej. 3</a><a href="#ej4">Ej. 4</a><a href="#ej5">Ej. 5</a><a href="#ej6">Ej. 6</a><a href="#base">Código base</a></nav>
+<section class="card reglas" id="reglas"><h2>Cómo trabajamos hoy</h2><ul>
+<li>Trabajás con tu compañero/a de banco, como están sentados, y comparten una compu.</li>
+<li>Cada ejercicio va con lo que se está haciendo en el pizarrón. Cuando el profe anuncia un bloque nuevo, pasan al ejercicio con ese número.</li>
+<li>Primero se dibuja, después se programa. Los puntos <b>EN PAPEL</b> se resuelven en una hoja con los nombres de los dos, y los <b>EN LA COMPU</b> sirven para comprobar.</li>
+<li>Si a uno de los dos lo llaman al pizarrón, el otro sigue trabajando. Cuando vuelve, se ponen al día y continúan juntos. Los <b>DESAFÍOS ★</b> son para quienes terminan antes.</li>
+<li>Al final de la clase entregan la hoja con todo lo resuelto.</li></ul></section>
+<section class="card" id="ej1"><div class="exh"><span class="num">1</span><div><h2>Ejercicio 1 · Recorrer la lista</h2><div class="ec">Invernadero: temperaturas en °C</div></div><span class="link">va con las tarjetas 1A y 1B</span></div>
+<div class="dato">cabeza → 12 → 15 → 9 → 18 → None</div><ol><li><span class="tag" style="--c:var(--blue)">EN PAPEL</span> Dibujá la lista con cajas y flechas, como en la Misión Expo.</li><li><span class="tag" style="--c:var(--blue)">EN PAPEL</span> ¿Qué imprime este código? Escribí tu predicción antes de probarlo.<div class="codebox"><button class="copiar">copiar</button><pre>actual = cabeza
+while actual is not None:
+    if actual.dato &gt; 10:
+        print(actual.dato)
+    actual = actual.siguiente</pre></div></li><li><span class="tag" style="--c:var(--blue)">EN PAPEL</span> Escribí <code>promedio(cabeza)</code> que devuelva el promedio de las temperaturas. Pista: en un mismo recorrido podés sumar y contar.</li><li><span class="tag" style="--c:var(--green)">EN LA COMPU</span> Armá la lista, probá el código del punto 2 y tu <code>promedio</code>. ¿Coincidió con tu predicción?</li><li><span class="tag" style="--c:var(--amber)">DESAFÍO ★</span> ¿Qué pasa con tu <code>promedio</code> si la lista está vacía? Corregilo para que no se rompa.</li></ol></section><section class="card" id="ej2"><div class="exh"><span class="num">2</span><div><h2>Ejercicio 2 · Buscar en la lista</h2><div class="ec">Pañol del taller</div></div><span class="link">va con las tarjetas 2A y 2B</span></div>
+<div class="dato">cabeza → &quot;sensor&quot; → &quot;led&quot; → &quot;relé&quot; → &quot;led&quot; → &quot;motor&quot; → None</div><ol><li><span class="tag" style="--c:var(--blue)">EN PAPEL</span> ¿Cuántos nodos visita una búsqueda de "relé"? ¿Y una de "servo"? ¿Por qué la segunda es el peor caso?</li><li><span class="tag" style="--c:var(--blue)">EN PAPEL</span> Escribí <code>reemplazar(cabeza, viejo, nuevo)</code> que cambie todas las apariciones de <code>viejo</code> por <code>nuevo</code>. Ejemplo: cambiar "led" por "led rgb". No devuelve nada.</li><li><span class="tag" style="--c:var(--green)">EN LA COMPU</span> Probá <code>reemplazar</code> y mostrá la lista antes y después.</li><li><span class="tag" style="--c:var(--amber)">DESAFÍO ★</span> Escribí <code>contar_distintos(cabeza)</code>: cuántos componentes diferentes hay (en el ejemplo, 4).</li></ol></section><section class="card" id="ej3"><div class="exh"><span class="num">3</span><div><h2>Ejercicio 3 · Insertar en la lista</h2><div class="ec">Hoja de ruta del proyecto</div></div><span class="link">va con las tarjetas 3A y 3B</span></div>
+<div class="dato">cabeza → &quot;B&quot; → &quot;C&quot; → None</div><ol><li><span class="tag" style="--c:var(--blue)">EN PAPEL</span> Dibujá cómo queda la lista después de CADA una de estas líneas:<div class="codebox"><button class="copiar">copiar</button><pre>nuevo = Nodo(&quot;A&quot;)
+nuevo.siguiente = cabeza
+cabeza = nuevo</pre></div></li><li><span class="tag" style="--c:var(--blue)">EN PAPEL</span> Buscá el error. ¿Cuántas tareas muestra y por qué? Corregilo.<div class="codebox"><button class="copiar">copiar</button><pre>cabeza = None
+agregar_al_inicio(cabeza, &quot;Comprar sensor&quot;)
+agregar_al_inicio(cabeza, &quot;Armar circuito&quot;)
+mostrar(cabeza)</pre></div></li><li><span class="tag" style="--c:var(--blue)">EN PAPEL</span> Querés que la lista quede "Lunes" → "Martes" → "Miércoles" usando solo <code>agregar_al_inicio</code>. ¿En qué orden tenés que agregarlos?</li><li><span class="tag" style="--c:var(--green)">EN LA COMPU</span> Escribí <code>insertar_tercero(cabeza, dato)</code> que ponga el dato en el tercer lugar (la lista tiene al menos 2 nodos) y probala.</li></ol></section><section class="card" id="ej4"><div class="exh"><span class="num">4</span><div><h2>Ejercicio 4 · Eliminar de la lista</h2><div class="ec">Cola de la impresora 3D</div></div><span class="link">va con las tarjetas 4A y 4B</span></div>
+<div class="dato">cabeza → &quot;Soporte&quot; → &quot;Engranaje&quot; → &quot;Carcasa&quot; → None</div><ol><li><span class="tag" style="--c:var(--blue)">EN PAPEL</span> Dibujá la cola antes y después de <code>cabeza = cabeza.siguiente</code>. ¿Qué pasa con "Soporte"? ¿Alguna flecha lo apunta?</li><li><span class="tag" style="--c:var(--blue)">EN PAPEL</span> Esta línea saca el segundo pedido: <code>cabeza.siguiente = cabeza.siguiente.siguiente</code>. ¿Qué pasa si la cola tiene un solo pedido? ¿Y si está vacía? Escribí una versión protegida con <code>if</code>.</li><li><span class="tag" style="--c:var(--green)">EN LA COMPU</span> Completá los huecos de <code>eliminar_valor</code> y probalo con los 3 casos: el primero, uno del medio y uno que no está.<div class="codebox"><button class="copiar">copiar</button><pre>def eliminar_valor(cabeza, dato):
+    if cabeza is None:
+        return None
+    if cabeza.dato == dato:            # caso 1: es el primero
+        return ________
+    actual = cabeza
+    while actual.siguiente is not None:
+        if actual.siguiente.dato == dato:    # caso 2: es el que sigue
+            actual.siguiente = ________
+            return cabeza
+        actual = ________
+    return cabeza                      # caso 3: no estaba</pre></div></li></ol></section><section class="card" id="ej5"><div class="exh"><span class="num">5</span><div><h2>Ejercicio 5 · Árbol binario de búsqueda</h2><div class="ec">Legajos de la escuela</div></div><span class="link">va con las tarjetas 5A y 5B</span></div>
+<div class="dato">Se insertan en este orden: 45, 25, 65, 15, 35, 55, 75, 30</div><ol><li><span class="tag" style="--c:var(--blue)">EN PAPEL</span> Dibujá el árbol binario de búsqueda (menor a la izquierda, mayor a la derecha).</li><li><span class="tag" style="--c:var(--blue)">EN PAPEL</span> Escribí el camino de nodos para buscar el 30 y para buscar el 50. ¿Cuántos nodos visita cada búsqueda?</li><li><span class="tag" style="--c:var(--blue)">EN PAPEL</span> ¿Cuál es el legajo más chico y cuál el más grande? ¿Qué camino seguís para encontrarlos sin mirar todo el árbol?</li><li><span class="tag" style="--c:var(--blue)">EN PAPEL</span> Si los legajos llegaran ordenados (15, 25, 30, 35, 45, 55, 65, 75), ¿qué forma tendría el árbol? ¿Cuántos pasos lleva encontrar el 75?</li><li><span class="tag" style="--c:var(--green)">EN LA COMPU</span> Cargá el árbol con <code>insertar</code> (está en el código base) y escribí <code>buscar_con_camino(raiz, valor)</code> que imprima cada nodo que visita. Compará con el punto 2.</li></ol></section><section class="card" id="ej6"><div class="exh"><span class="num">6</span><div><h2>Ejercicio 6 · Recorridos del árbol</h2><div class="ec">Legajos de la escuela</div></div><span class="link">va con las tarjetas 6A y 6B</span></div>
+<div class="dato">Usá el mismo árbol del ejercicio 5</div><ol><li><span class="tag" style="--c:var(--blue)">EN PAPEL</span> Escribí la salida de inorden, preorden y postorden. Usá el truco del contorno: rodeá el árbol con una línea por fuera.</li><li><span class="tag" style="--c:var(--blue)">EN PAPEL</span> Ubicá el <code>print</code> en el lugar correcto para que sea preorden:<div class="codebox"><button class="copiar">copiar</button><pre>def preorden(raiz):
+    if raiz is not None:
+        # ¿acá?
+        preorden(raiz.izq)
+        # ¿o acá?
+        preorden(raiz.der)
+        # ¿o acá?</pre></div></li><li><span class="tag" style="--c:var(--green)">EN LA COMPU</span> Programá los tres recorridos y verificá tus respuestas del punto 1.</li><li><span class="tag" style="--c:var(--amber)">DESAFÍO ★</span> Escribí <code>altura(raiz)</code>: cuántos niveles tiene el árbol (en este, 4).</li></ol></section>
+<section class="card" id="base"><h2>Código base para la compu</h2><p style="margin-top:8px">Copienlo al principio de su archivo: tiene los moldes y las funciones que ya vimos en la Misión Expo.</p>
+<div class="codebox"><button class="copiar">copiar</button><pre>class Nodo:
+    def __init__(self, dato):
+        self.dato = dato
+        self.siguiente = None
+
+class NodoArbol:
+    def __init__(self, dato):
+        self.dato = dato
+        self.izq = None
+        self.der = None
+
+def mostrar(cabeza):
+    actual = cabeza
+    while actual is not None:
+        print(actual.dato)
+        actual = actual.siguiente
+
+def agregar_al_inicio(cabeza, dato):
+    nuevo = Nodo(dato)
+    nuevo.siguiente = cabeza
+    return nuevo
+
+def insertar(raiz, dato):
+    if raiz is None:
+        return NodoArbol(dato)
+    if dato &lt; raiz.dato:
+        raiz.izq = insertar(raiz.izq, dato)
+    else:
+        raiz.der = insertar(raiz.der, dato)
+    return raiz</pre></div></section>
+<footer>Escuela Industrial N° 9 "15 de Noviembre" · El Calafate, Santa Cruz<b>Prof. Pablo Limardo – Jefatura ACPI</b></footer>
+</div><script>document.querySelectorAll('.copiar').forEach(b=>b.addEventListener('click',()=>{const t=b.parentElement.querySelector('pre').innerText;navigator.clipboard.writeText(t).then(()=>{b.textContent='¡copiado!';b.classList.add('ok');setTimeout(()=>{b.textContent='copiar';b.classList.remove('ok')},1500)})}));
+const barra=document.getElementById('barra');
+const links=[...document.querySelectorAll('nav a')];
+window.addEventListener('scroll',()=>{const t=document.documentElement.scrollHeight-innerHeight;barra.style.width=(t>0?scrollY/t*100:0)+'%';
+ let act=null;document.querySelectorAll('section[id]').forEach(s=>{if(s.getBoundingClientRect().top<120)act=s.id});
+ links.forEach(a=>a.classList.toggle('activo',a.getAttribute('href')==='#'+act));});
+</script></body></html>
